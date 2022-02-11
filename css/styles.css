@@ -1,3 +1,4 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css);
 *, *::after, *::before {
   box-sizing: inherit;
 }
@@ -63,10 +64,13 @@ header img {
 .zone .zone__explore button {
   color: #fff;
   background-color: #FF79DA;
+  font-weight: 600;
+  font-size: 0.9em;
   border: none;
   border-radius: 30px;
-  padding: 15px 25px;
+  padding: 20px 30px;
   margin-bottom: 65px;
+  cursor: pointer;
 }
 
 /* --------- SECTION FONCTIONNEMENT --------- */
@@ -86,8 +90,15 @@ header img {
   width: 90%;
   background-color: #f0f0f0;
   border-radius: 30px;
+  margin-bottom: 40px;
   padding: 20px;
   position: relative;
+}
+.functioning .functioning__bar:hover {
+  background-color: #f9e8fd;
+}
+.functioning .functioning__bar:hover > i {
+  color: #9356DC;
 }
 .functioning .functioning__bar .functioning_bar_number {
   position: absolute;
@@ -100,12 +111,14 @@ header img {
 }
 .functioning .functioning__bar .functioning_bar_number p {
   position: absolute;
-  left: 10px;
-  top: -14px;
+  left: 9px;
+  top: -15px;
+  font-weight: 100;
 }
 .functioning .functioning__bar i {
   width: 20%;
   text-align: center;
+  color: #929292;
 }
 .functioning .functioning__bar p {
   font-weight: bold;
@@ -118,8 +131,8 @@ header img {
   flex-direction: column;
   align-items: center;
   background-color: #f0f0f0;
-  margin-top: 60px;
-  padding-bottom: 60px;
+  margin-top: 30px;
+  padding-bottom: 55px;
 }
 .restaurants h2 {
   margin: 60px 0 30px 5%;
@@ -130,6 +143,7 @@ header img {
   border: solid 1px #f0f0f0;
   border-radius: 20px;
   background-color: #fff;
+  margin-bottom: 25px;
   overflow: hidden;
 }
 .restaurants .restaurants__card img {
@@ -137,6 +151,10 @@ header img {
      object-fit: cover;
   width: 100%;
   height: 250px;
+}
+.restaurants .restaurants__card a {
+  text-decoration: none;
+  color: #000;
 }
 .restaurants .restaurants__card .restaurants__card__content {
   display: flex;
@@ -155,6 +173,7 @@ header img {
 .restaurants .restaurants__card .restaurants__card__content i {
   width: 20%;
   text-align: center;
+  font-size: 2em;
 }
 
 /* ----------------  FOOTER ----------------- */
@@ -182,5 +201,6 @@ header img {
   text-decoration: none;
 }
 .footer i {
+  width: 4%;
   margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */

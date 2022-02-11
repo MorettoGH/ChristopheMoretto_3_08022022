@@ -1,3 +1,8 @@
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css);
+@import "utils/variables";
+
+
 *, *::after , *::before {
     box-sizing: inherit;
 }
@@ -9,11 +14,6 @@ html {
 body {
     font-family: 'Roboto', sans-serif;
 }
-
-$color-primary: #9356DC;
-$color-secondary: #FF79DA;
-$color-tertiary: #99E2D0;
-$color-quaternary: #f0f0f0;
 
 
 /* ---------- HEADER PAGE ACCUEIL ----------- */
@@ -68,10 +68,13 @@ header {
         button {
             color: #fff;
             background-color: $color-secondary;
+            font-weight: 600;
+            font-size: 0.9em;
             border: none;
             border-radius: 30px;
-            padding: 15px 25px;
+            padding: 20px 30px;
             margin-bottom: 65px;
+            cursor: pointer;
         }
     }
 }
@@ -94,8 +97,15 @@ header {
         width: 90%;
         background-color: $color-quaternary;
         border-radius: 30px;
+        margin-bottom: 40px;
         padding: 20px;
         position: relative;
+        &:hover {
+            background-color: #f9e8fd;
+        }
+        &:hover > i {
+            color: $color-primary;
+        }
         .functioning_bar_number {
             position: absolute;
             left: -12px;
@@ -106,13 +116,15 @@ header {
             height: 30px;
             p {
                 position: absolute; 
-                left: 10px;
-                top: -14px;
+                left: 9px;
+                top: -15px;
+                font-weight: 100;
             }
         }
         i {
             width: 20%;
             text-align: center;
+            color: #929292;
         }
         p {
             font-weight: bold;
@@ -129,8 +141,8 @@ header {
     flex-direction: column;
     align-items: center;
     background-color: $color-quaternary;
-    margin-top: 60px;
-    padding-bottom: 60px;
+    margin-top: 30px;
+    padding-bottom: 55px;
     h2 {
         margin: 60px 0 30px 5%;
         align-self: flex-start;
@@ -140,11 +152,16 @@ header {
         border: solid 1px $color-quaternary;
         border-radius: 20px;
         background-color: #fff;
+        margin-bottom: 25px;
         overflow: hidden;
         img {
             object-fit: cover;
             width: 100%;
             height: 250px;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
         }
         .restaurants__card__content {
             display: flex;
@@ -162,6 +179,7 @@ header {
             i {
                 width: 20%;
                 text-align: center;
+                font-size: 2em;  
             }
         }
     }
@@ -193,6 +211,7 @@ header {
         text-decoration: none;
     }
     i {
+        width: 4%;
         margin-right: 10px;
     }
     
