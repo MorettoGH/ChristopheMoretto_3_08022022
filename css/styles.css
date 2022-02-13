@@ -11,6 +11,34 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.footer {
+  background-color: #575757;
+  padding: 20px 0 25px 30px;
+}
+.footer h4 {
+  margin: 0 0 20px;
+  font-family: "Shrikhand", sans-serif;
+  font-size: 1.4em;
+  font-weight: 200;
+  color: #fff;
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.5em;
+}
+.footer ul li:nth-child(-n+2) {
+  font-weight: bold;
+}
+.footer a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer i {
+  width: 4%;
+  margin-right: 10px;
+}
+
 /* ---------- HEADER PAGE ACCUEIL ----------- */
 header {
   display: flex;
@@ -37,6 +65,7 @@ header img {
   height: 60px;
   font-weight: bold;
   margin-top: 60px;
+  box-shadow: inset 0 5px 5px #9c9c9c;
 }
 .zone .zone__location div {
   width: 40%;
@@ -57,7 +86,7 @@ header img {
   font-size: 1.8em;
 }
 .zone .zone__explore p {
-  margin: 10px 5% 30px;
+  margin: 10px 5% 35px;
   font-size: 1.5em;
   color: #575757;
 }
@@ -65,12 +94,18 @@ header img {
   color: #fff;
   background-color: #FF79DA;
   font-weight: 600;
-  font-size: 0.9em;
+  font-size: 1.3em;
+  letter-spacing: 1px;
   border: none;
   border-radius: 30px;
   padding: 20px 30px;
   margin-bottom: 65px;
   cursor: pointer;
+  box-shadow: 0 5px 5px #a8a8a8;
+}
+.zone .zone__explore button:hover {
+  background-color: #ff97fa;
+  box-shadow: 5px 8px 10px #a8a8a8;
 }
 
 /* --------- SECTION FONCTIONNEMENT --------- */
@@ -92,10 +127,13 @@ header img {
   border-radius: 30px;
   margin-bottom: 40px;
   padding: 20px;
+  box-shadow: 5px 5px 5px #dddddd;
   position: relative;
 }
 .functioning .functioning__bar:hover {
   background-color: #f9e8fd;
+  cursor: pointer;
+  box-shadow: 5px 8px 8px #dddddd;
 }
 .functioning .functioning__bar:hover > i {
   color: #9356DC;
@@ -144,6 +182,7 @@ header img {
   border-radius: 20px;
   background-color: #fff;
   margin-bottom: 25px;
+  box-shadow: 0 5px 5px #dddddd;
   overflow: hidden;
 }
 .restaurants .restaurants__card img {
@@ -155,6 +194,9 @@ header img {
 .restaurants .restaurants__card a {
   text-decoration: none;
   color: #000;
+}
+.restaurants .restaurants__card:hover {
+  box-shadow: 0 8px 10px #a8a8a8;
 }
 .restaurants .restaurants__card .restaurants__card__content {
   display: flex;
@@ -174,33 +216,4 @@ header img {
   width: 20%;
   text-align: center;
   font-size: 2em;
-}
-
-/* ----------------  FOOTER ----------------- */
-.footer {
-  background-color: #575757;
-  padding: 20px 0 25px 30px;
-}
-.footer h4 {
-  margin: 0 0 20px;
-  font-family: "Shrikhand", sans-serif;
-  font-size: 1.4em;
-  font-weight: 200;
-  color: #fff;
-}
-.footer ul {
-  list-style: none;
-  padding-left: 0;
-  line-height: 1.5em;
-}
-.footer ul li:nth-child(-n+2) {
-  font-weight: bold;
-}
-.footer a {
-  color: #fff;
-  text-decoration: none;
-}
-.footer i {
-  width: 4%;
-  margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */
