@@ -20,7 +20,7 @@ header {
   height: 60px;
   background-color: #fff;
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 header img {
   height: 30px;
@@ -84,6 +84,7 @@ header img {
   padding: 20px;
   box-shadow: 5px 5px 5px #dddddd;
   position: relative;
+  transition: box-shadow 200ms;
 }
 .functioning .functioning__bar:hover {
   background-color: #f9e8fd;
@@ -139,6 +140,7 @@ header img {
   margin-bottom: 30px;
   box-shadow: 0 5px 5px #dddddd;
   overflow: hidden;
+  transition: box-shadow 300ms;
 }
 .restaurants .restaurants__card img {
   -o-object-fit: cover;
@@ -153,10 +155,27 @@ header img {
 .restaurants .restaurants__card:hover {
   box-shadow: 0 8px 10px #a8a8a8;
 }
+.restaurants .restaurants__card .restaurants__new {
+  color: #00c060 !important;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-decoration: none;
+  background-color: #99E2D0;
+  border-radius: 5px;
+  width: 110px;
+  padding: 8px 5px;
+  text-align: center;
+  position: relative;
+  top: -320px;
+  right: -280px;
+}
 .restaurants .restaurants__card .restaurants__card__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.restaurants .restaurants__card .restaurants__card__content .restaurants__card__content__height {
+  height: 90px;
 }
 .restaurants .restaurants__card .restaurants__card__content h3 {
   margin: 20px 0 5px 20px;
@@ -171,6 +190,7 @@ header img {
   width: 20%;
   text-align: center;
   font-size: 2em;
+  color: #797979;
 }
 
 header {
@@ -205,11 +225,18 @@ header ::before {
   width: 100%;
   margin-top: 60px;
 }
+.menu .menu__above {
+  background-color: #f0f0f0;
+  border-radius: 50px 50px;
+  position: relative;
+  z-index: 1;
+  top: -50px;
+}
 .menu .menu__title {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 .menu .menu__title h1 {
   margin-left: 30px;
@@ -218,12 +245,14 @@ header ::before {
   width: 20%;
   font-size: 2em;
   padding-left: 10px;
+  color: #797979;
+  cursor: pointer;
 }
 .menu h2 {
   text-transform: uppercase;
   font-size: 1.2em;
   font-weight: 100;
-  margin: 40px 0 0 30px;
+  margin: 30px 0 0 30px;
   align-self: flex-start;
 }
 .menu hr {
@@ -268,7 +297,7 @@ header ::before {
 }
 .menu .menu__button {
   text-align: center;
-  margin-top: 40px;
+  margin-top: -10px;
   padding-bottom: 30px;
 }
 .menu .menu__button .menu__button__size {
@@ -277,7 +306,7 @@ header ::before {
 
 button {
   color: #fff;
-  background-color: #FF79DA;
+  background: linear-gradient(#FF79DA, #9356DC);
   font-weight: 600;
   font-size: 1.3em;
   letter-spacing: 1px;
@@ -287,9 +316,10 @@ button {
   margin-bottom: 65px;
   cursor: pointer;
   box-shadow: 0 5px 5px #a8a8a8;
+  transition: box-shadow 200ms;
 }
 button:hover {
-  background-color: #ff97fa;
+  background: linear-gradient(#ff92fa, #ef43ff);
   box-shadow: 5px 8px 10px #a8a8a8;
 }
 

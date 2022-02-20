@@ -1,6 +1,6 @@
 button {
     color: #fff;
-    background-color: $color-secondary;
+    background: linear-gradient($color-secondary, $color-primary);
     font-weight: 600;
     font-size: 1.3em;
     letter-spacing:1px;
@@ -10,8 +10,9 @@ button {
     margin-bottom: 65px;
     cursor: pointer;
     box-shadow: 0 5px 5px #a8a8a8;
+    transition: box-shadow 200ms;
     &:hover {
-        background-color: #ff97fa;
+        background: linear-gradient(#ff92fa, #ef43ff);
         box-shadow: 5px 8px 10px #a8a8a8;
     }
 }    
