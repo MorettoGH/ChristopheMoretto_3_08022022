@@ -40,14 +40,14 @@ header img {
   box-shadow: inset 0 5px 5px #9c9c9c;
 }
 .zone .zone__location div {
-  width: 40%;
+  width: 41%;
   padding-right: 20px;
   align-self: center;
   text-align: end;
 }
 .zone .zone__location p {
   font-size: 1.1em;
-  width: 60%;
+  width: 59%;
 }
 .zone .zone__explore {
   background-color: #f0f0f0;
@@ -129,11 +129,11 @@ header img {
   padding-bottom: 55px;
 }
 .restaurants h2 {
-  margin: 60px 0 30px 5%;
-  align-self: flex-start;
+  margin: 60px 0 30px 0;
+  width: 90%;
 }
 .restaurants .restaurants__card {
-  width: 90%;
+  width: 380px;
   border: solid 1px #f0f0f0;
   border-radius: 20px;
   background-color: #fff;
@@ -146,7 +146,7 @@ header img {
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
-  height: 250px;
+  height: 200px;
 }
 .restaurants .restaurants__card a {
   text-decoration: none;
@@ -166,8 +166,8 @@ header img {
   padding: 8px 5px;
   text-align: center;
   position: relative;
-  top: -320px;
-  right: -280px;
+  top: -280px;
+  right: -230px;
 }
 .restaurants .restaurants__card .restaurants__card__content {
   display: flex;
@@ -193,6 +193,89 @@ header img {
   color: #797979;
 }
 
+/* ---------- MEDIA QUERIES ----------- */
+@media screen and (min-width: 600px) {
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .restaurants .restaurants__card {
+    margin: 0 3px 30px 3px;
+  }
+  .restaurants h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  /* --------- SECTION GEOLOCALISATION -------- */
+  .zone .zone__location div {
+    width: 45%;
+  }
+  .zone .zone__location p {
+    width: 55%;
+  }
+
+  /* --------- SECTION FONCTIONNEMENT --------- */
+  .functioning {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .functioning h2 {
+    margin: 0 0 35px 5%;
+    width: 90%;
+  }
+  .functioning .functioning__bar {
+    width: 40%;
+    height: 100px;
+  }
+  .functioning .functioning__bar i {
+    margin-right: 20px;
+  }
+
+  /* ----- SECTION LISTES DES RESTAURANTS ----- */
+  .restaurants {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .restaurants .restaurants__card {
+    margin: 0 3px 30px 3px;
+  }
+  .restaurants h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  /* --------- SECTION GEOLOCALISATION -------- */
+  .zone .zone__location div {
+    width: 47%;
+  }
+  .zone .zone__location p {
+    width: 53%;
+  }
+
+  /* --------- SECTION FONCTIONNEMENT --------- */
+  .functioning {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .functioning h2 {
+    margin: 0 0 35px 5%;
+    width: 90%;
+  }
+  .functioning .functioning__bar {
+    width: 25%;
+    height: 100px;
+  }
+  .functioning .functioning__bar i {
+    margin-right: 20px;
+  }
+}
 header {
   display: flex;
   justify-content: center;
@@ -201,7 +284,7 @@ header {
   height: 60px;
   background-color: #fff;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
 }
 header img {
   height: 30px;
@@ -217,15 +300,11 @@ header ::before {
 .menu {
   background-color: #f0f0f0;
 }
-.menu h1 {
-  font-family: "shrikhand", sans-serif;
-  font-weight: 100;
-}
 .menu .menu__img {
   width: 100%;
   margin-top: 60px;
 }
-.menu .menu__above {
+.menu .menu__container {
   background-color: #f0f0f0;
   border-radius: 50px 50px;
   position: relative;
@@ -239,6 +318,8 @@ header ::before {
   padding-top: 15px;
 }
 .menu .menu__title h1 {
+  font-family: "shrikhand", sans-serif;
+  font-weight: 100;
   margin-left: 30px;
 }
 .menu .menu__title i {
@@ -260,16 +341,19 @@ header ::before {
   height: 4px;
   background-color: #99E2D0;
   border: none;
-  position: relative;
-  left: -188px;
-  margin: 5px 0 20px;
+  align-self: flex-start;
+  margin: 5px 0 20px 30px;
 }
 .menu .menu__list {
   display: flex;
   flex-direction: column;
+}
+.menu .menu__list .menu__list__container {
+  display: flex;
+  flex-direction: column;
   align-items: center;
 }
-.menu .menu__list .menu__list__card {
+.menu .menu__list .menu__list__container .menu__list__card {
   display: flex;
   justify-content: space-between;
   background-color: #fff;
@@ -278,19 +362,19 @@ header ::before {
   width: 90%;
   border-radius: 20px;
 }
-.menu .menu__list .menu__list__card:hover {
+.menu .menu__list .menu__list__container .menu__list__card:hover {
   cursor: pointer;
   box-shadow: 5px 8px 8px #dddddd;
 }
-.menu .menu__list .menu__list__card h3 {
-  font-size: 1.4em;
+.menu .menu__list .menu__list__container .menu__list__card h3 {
+  font-size: 1.3em;
   margin: 18px 0 5px 15px;
 }
-.menu .menu__list .menu__list__card p {
-  font-size: 1.2em;
+.menu .menu__list .menu__list__container .menu__list__card p {
+  font-size: 1.1em;
   margin: 8px 0 18px 15px;
 }
-.menu .menu__list .menu__list__card .menu__list__card__number {
+.menu .menu__list .menu__list__container .menu__list__card .menu__list__card__number {
   padding: 45px 30px 0 0;
   font-weight: bold;
   font-size: 1.1em;
@@ -304,6 +388,98 @@ header ::before {
   padding: 20px 60px;
 }
 
+/* ----------- MEDIA QUERIES --------- */
+@media screen and (min-width: 600px) {
+  .menu .menu__img {
+    height: 400px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .menu .menu__title {
+    justify-content: center;
+    padding-top: 15px;
+  }
+  .menu .menu__title h1 {
+    padding-left: 100px;
+  }
+  .menu .menu__title i {
+    padding-left: 12%;
+  }
+  .menu h2 {
+    align-self: center;
+    padding-right: 25px;
+  }
+  .menu hr {
+    align-self: center;
+    margin: 5px 0 20px 0;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card {
+    width: 75%;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card h3 {
+    font-size: 1.4em;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card p {
+    font-size: 1.2em;
+  }
+}
+@media screen and (min-width: 768px) {
+  .menu .menu__title i {
+    padding-left: 15%;
+  }
+  .menu h2 {
+    margin-top: 50px;
+  }
+  .menu .menu__list .menu__list__container {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card {
+    width: 45%;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card h3 {
+    font-size: 1.4em;
+    margin: 18px 0 5px 15px;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card p {
+    font-size: 1.2em;
+    margin: 8px 0 18px 15px;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card .menu__list__card__number {
+    padding: 45px 30px 0 0;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu .menu__title {
+    justify-content: right;
+  }
+  .menu .menu__title i {
+    padding-left: 35%;
+    width: 45%;
+  }
+  .menu h2 {
+    margin-top: 75px;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card {
+    width: 30%;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card h3 {
+    font-size: 1.4em;
+    margin: 18px 0 5px 15px;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card p {
+    font-size: 1.2em;
+    margin: 8px 0 18px 15px;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card .menu__list__card__number {
+    padding: 45px 30px 0 0;
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+}
 button {
   color: #fff;
   background: linear-gradient(#FF79DA, #9356DC);
@@ -347,6 +523,6 @@ button:hover {
   text-decoration: none;
 }
 .footer i {
-  width: 4%;
+  width: 20px;
   margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */

@@ -26,14 +26,14 @@ header {
         margin-top: 60px;
         box-shadow: inset 0 5px 5px #9c9c9c;
         div {
-            width: 40%;
+            width: 41%;
             padding-right: 20px;
             align-self: center;
             text-align: end;
         }
         p {
             font-size: 1.1em;
-            width: 60%;
+            width: 59%;
         }
     }
     .zone__explore {
@@ -120,11 +120,11 @@ header {
     margin-top: 30px;
     padding-bottom: 55px;
     h2 {
-        margin: 60px 0 30px 5%;
-        align-self: flex-start;
+        margin: 60px 0 30px 0;
+        width: 90%;
     }
     .restaurants__card {
-        width: 90%;
+        width: 380px;
         border: solid 1px $color-quaternary;
         border-radius: 20px;
         background-color: #fff;
@@ -135,7 +135,7 @@ header {
         img {
             object-fit: cover;
             width: 100%;
-            height: 250px;
+            height: 200px;
         }
         a {
             text-decoration: none;
@@ -155,8 +155,8 @@ header {
             padding: 8px 5px;
             text-align: center;
             position: relative;
-            top: -320px;
-            right: -280px;
+            top: -280px;
+            right: -230px;
         }
         .restaurants__card__content {
             display: flex;
@@ -179,6 +179,107 @@ header {
                 text-align: center;
                 font-size: 2em;
                 color: #797979;
+            }
+        }
+    }
+} 
+
+/* ---------- MEDIA QUERIES ----------- */
+
+@media screen and (min-width: 600px) {
+
+    .restaurants {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .restaurants__card {
+            margin: 0 3px 30px 3px;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    /* --------- SECTION GEOLOCALISATION -------- */
+    .zone {
+        .zone__location {
+            div {
+                width: 45%;
+            }
+            p {
+                width: 55%;
+            }
+        }
+    }
+
+    /* --------- SECTION FONCTIONNEMENT --------- */
+
+    .functioning {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        h2 {
+            margin: 0 0 35px 5%;
+            width: 90%;
+        }
+        .functioning__bar {
+            width: 40%;
+            height: 100px;
+            i {
+                margin-right: 20px;
+            }
+        }
+    }
+
+    /* ----- SECTION LISTES DES RESTAURANTS ----- */
+
+    .restaurants {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        .restaurants__card {
+            margin: 0 3px 30px 3px;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /* --------- SECTION GEOLOCALISATION -------- */
+    .zone {
+        .zone__location {
+            div {
+                width: 47%;
+            }
+            p {
+                width: 53%;
+            }
+        }
+    }
+
+    /* --------- SECTION FONCTIONNEMENT --------- */
+
+    .functioning {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        h2 {
+            margin: 0 0 35px 5%;
+            width: 90%;
+        }
+        .functioning__bar {
+            width: 25%;
+            height: 100px;
+            i {
+                margin-right: 20px;
             }
         }
     }
