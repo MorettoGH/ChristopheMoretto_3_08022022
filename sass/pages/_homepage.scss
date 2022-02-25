@@ -1,3 +1,77 @@
+.spinner{
+    background: #dbdbdb;
+}
+
+.loading {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    .loading__logo {
+        width: 100%;
+        margin: 200px 0 25px;
+        text-align: center;
+        img {
+            width: 200px;
+        }
+    }
+    .loading__bg {
+        width: 150px;
+        height: 150px;
+        background: radial-gradient($color-secondary, $color-primary, );
+        border-radius: 50%;
+        .loading__spinner {
+            width: 30px;
+            height: 30px;
+            background-color: $color-tertiary;
+            border-radius: 50%;
+            position: relative;
+            top: 10px;
+            right: -60px;
+            transform-origin: 15px 65px;
+            animation-name: spin;
+            animation-duration: 1500ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .loading__spinner__2 {
+            width: 23px;
+            height: 23px;
+            background-color: $color-tertiary;
+            border-radius: 50%;
+            position: relative;
+            top: -5px;
+            right: -30px;
+            transform-origin: 45px 50px;
+            animation-name: spin;
+            animation-duration: 1500ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+        .loading__spinner__3 {
+            width: 16px;
+            height: 16px;
+            background-color: $color-tertiary;
+            border-radius: 50%;
+            position: relative;
+            top: -3px;
+            right: -15px;
+            transform-origin: 60px 26px;
+            animation-name: spin;
+            animation-duration: 1500ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+    }
+}
+
+@keyframes spin { 
+    from { 
+        transform: rotate(0deg); 
+    } to { 
+        transform: rotate(360deg); 
+    }
+}
+
 /* ---------- HEADER PAGE ACCUEIL ----------- */
 header {
     display: flex;
@@ -12,7 +86,6 @@ header {
         height: 30px;
     }
 }
-
 
 /* --------- SECTION GEOLOCALISATION -------- */
 .zone {
@@ -124,7 +197,8 @@ header {
         width: 90%;
     }
     .restaurants__card {
-        width: 380px;
+        width: 350px;
+        height: 300px;
         border: solid 1px $color-quaternary;
         border-radius: 20px;
         background-color: #fff;
@@ -156,7 +230,7 @@ header {
             text-align: center;
             position: relative;
             top: -280px;
-            right: -230px;
+            right: -200px;
         }
         .restaurants__card__content {
             display: flex;
@@ -174,15 +248,50 @@ header {
                 font-size: 1.2em;
                 color: #575757;
             }
-            i {
-                width: 20%;
-                text-align: center;
-                font-size: 2em;
-                color: #797979;
+        }
+        i {
+            font-size: 2em;
+            color: #797979;
+            position: relative;
+            top: -60px;
+            right: -300px;
+            &:hover { 
+                animation: liked 2s ease-in-out forwards;
+                cursor: pointer;
+            }
+            &:active {
+                animation: liked 2s ease-in-out forwards;
             }
         }
     }
 } 
+
+@keyframes liked { 
+    0% { 
+        font-weight: lighter;
+        color: $color-primary;
+        opacity: 1;
+    }
+    25% {
+        font-weight: bold;
+        color: $color-primary;
+        opacity: .3;
+    }
+    50% {
+        color: $color-primary;
+        opacity: .7;
+    }
+    75% {
+        color: $color-primary;
+        opacity: .9;
+    }
+    100%   { 
+        font-weight: bold;
+        color: $color-primary; 
+        opacity: 1;
+    }
+}
+
 
 /* ---------- MEDIA QUERIES ----------- */
 

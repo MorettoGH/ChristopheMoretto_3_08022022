@@ -11,6 +11,101 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.spinner {
+  background: #dbdbdb;
+}
+
+.loading {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.loading .loading__logo {
+  width: 100%;
+  margin: 200px 0 25px;
+  text-align: center;
+}
+.loading .loading__logo img {
+  width: 200px;
+}
+.loading .loading__bg {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(#FF79DA, #9356DC);
+  border-radius: 50%;
+}
+.loading .loading__bg .loading__spinner {
+  width: 30px;
+  height: 30px;
+  background-color: #99E2D0;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+  right: -60px;
+  transform-origin: 15px 65px;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.loading .loading__bg .loading__spinner__2 {
+  width: 23px;
+  height: 23px;
+  background-color: #99E2D0;
+  border-radius: 50%;
+  position: relative;
+  top: -5px;
+  right: -30px;
+  transform-origin: 45px 50px;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+.loading .loading__bg .loading__spinner__3 {
+  width: 16px;
+  height: 16px;
+  background-color: #99E2D0;
+  border-radius: 50%;
+  position: relative;
+  top: -3px;
+  right: -15px;
+  transform-origin: 60px 26px;
+  -webkit-animation-name: spin;
+          animation-name: spin;
+  -webkit-animation-duration: 1500ms;
+          animation-duration: 1500ms;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* ---------- HEADER PAGE ACCUEIL ----------- */
 header {
   display: flex;
@@ -133,7 +228,8 @@ header img {
   width: 90%;
 }
 .restaurants .restaurants__card {
-  width: 380px;
+  width: 350px;
+  height: 300px;
   border: solid 1px #f0f0f0;
   border-radius: 20px;
   background-color: #fff;
@@ -167,7 +263,7 @@ header img {
   text-align: center;
   position: relative;
   top: -280px;
-  right: -230px;
+  right: -200px;
 }
 .restaurants .restaurants__card .restaurants__card__content {
   display: flex;
@@ -186,13 +282,74 @@ header img {
   font-size: 1.2em;
   color: #575757;
 }
-.restaurants .restaurants__card .restaurants__card__content i {
-  width: 20%;
-  text-align: center;
+.restaurants .restaurants__card i {
   font-size: 2em;
   color: #797979;
+  position: relative;
+  top: -60px;
+  right: -300px;
+}
+.restaurants .restaurants__card i:hover {
+  -webkit-animation: liked 2s ease-in-out forwards;
+          animation: liked 2s ease-in-out forwards;
+  cursor: pointer;
+}
+.restaurants .restaurants__card i:active {
+  -webkit-animation: liked 2s ease-in-out forwards;
+          animation: liked 2s ease-in-out forwards;
 }
 
+@-webkit-keyframes liked {
+  0% {
+    font-weight: lighter;
+    color: #9356DC;
+    opacity: 1;
+  }
+  25% {
+    font-weight: bold;
+    color: #9356DC;
+    opacity: 0.3;
+  }
+  50% {
+    color: #9356DC;
+    opacity: 0.7;
+  }
+  75% {
+    color: #9356DC;
+    opacity: 0.9;
+  }
+  100% {
+    font-weight: bold;
+    color: #9356DC;
+    opacity: 1;
+  }
+}
+
+@keyframes liked {
+  0% {
+    font-weight: lighter;
+    color: #9356DC;
+    opacity: 1;
+  }
+  25% {
+    font-weight: bold;
+    color: #9356DC;
+    opacity: 0.3;
+  }
+  50% {
+    color: #9356DC;
+    opacity: 0.7;
+  }
+  75% {
+    color: #9356DC;
+    opacity: 0.9;
+  }
+  100% {
+    font-weight: bold;
+    color: #9356DC;
+    opacity: 1;
+  }
+}
 /* ---------- MEDIA QUERIES ----------- */
 @media screen and (min-width: 600px) {
   .restaurants {
