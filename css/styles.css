@@ -49,8 +49,8 @@ body {
           animation-duration: 1500ms;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: cubic-bezier(0.48, 0.02, 0.37, 1);
+          animation-timing-function: cubic-bezier(0.48, 0.02, 0.37, 1);
 }
 .loading .loading__bg .loading__spinner__2 {
   width: 23px;
@@ -67,8 +67,8 @@ body {
           animation-duration: 1500ms;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: cubic-bezier(0.48, 0.02, 0.37, 1);
+          animation-timing-function: cubic-bezier(0.48, 0.02, 0.37, 1);
 }
 .loading .loading__bg .loading__spinner__3 {
   width: 16px;
@@ -85,8 +85,8 @@ body {
           animation-duration: 1500ms;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
+  -webkit-animation-timing-function: cubic-bezier(0.48, 0.02, 0.37, 1);
+          animation-timing-function: cubic-bezier(0.48, 0.02, 0.37, 1);
 }
 
 @-webkit-keyframes spin {
@@ -460,6 +460,9 @@ header ::before {
 .menu .menu__img {
   width: 100%;
   margin-top: 60px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .menu .menu__container {
   background-color: #f0f0f0;
@@ -478,13 +481,21 @@ header ::before {
   font-family: "shrikhand", sans-serif;
   font-weight: 100;
   margin-left: 30px;
+  font-size: 1.9em;
 }
 .menu .menu__title i {
-  width: 20%;
   font-size: 2em;
-  padding-left: 10px;
+  padding-right: 20px;
   color: #797979;
   cursor: pointer;
+}
+.menu .menu__title i:hover {
+  -webkit-animation: liked 2s ease-in-out forwards;
+          animation: liked 2s ease-in-out forwards;
+}
+.menu .menu__title i:active {
+  -webkit-animation: liked 2s ease-in-out forwards;
+          animation: liked 2s ease-in-out forwards;
 }
 .menu h2 {
   text-transform: uppercase;
@@ -524,12 +535,12 @@ header ::before {
   box-shadow: 5px 8px 8px #dddddd;
 }
 .menu .menu__list .menu__list__container .menu__list__card h3 {
-  font-size: 1.3em;
-  margin: 18px 0 5px 15px;
+  font-size: 1.2em;
+  margin: 16px 0 5px 15px;
 }
 .menu .menu__list .menu__list__container .menu__list__card p {
   font-size: 1.1em;
-  margin: 8px 0 18px 15px;
+  margin: 8px 0 16px 15px;
 }
 .menu .menu__list .menu__list__container .menu__list__card .menu__list__card__number {
   padding: 45px 30px 0 0;
@@ -548,7 +559,7 @@ header ::before {
 /* ----------- MEDIA QUERIES --------- */
 @media screen and (min-width: 600px) {
   .menu .menu__img {
-    height: 400px;
+    height: 300px;
     -o-object-fit: cover;
        object-fit: cover;
   }

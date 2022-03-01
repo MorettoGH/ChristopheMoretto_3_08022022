@@ -31,7 +31,7 @@
             animation-name: spin;
             animation-duration: 1500ms;
             animation-iteration-count: infinite;
-            animation-timing-function: linear;
+            animation-timing-function: cubic-bezier(.48,.02,.37,1);
         }
         .loading__spinner__2 {
             width: 23px;
@@ -45,7 +45,7 @@
             animation-name: spin;
             animation-duration: 1500ms;
             animation-iteration-count: infinite;
-            animation-timing-function: linear;
+            animation-timing-function: cubic-bezier(.48,.02,.37,1);
         }
         .loading__spinner__3 {
             width: 16px;
@@ -59,7 +59,7 @@
             animation-name: spin;
             animation-duration: 1500ms;
             animation-iteration-count: infinite;
-            animation-timing-function: linear;
+            animation-timing-function: cubic-bezier(.48,.02,.37,1);
         }
     }
 }
