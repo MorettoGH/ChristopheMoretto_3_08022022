@@ -454,6 +454,23 @@ header ::before {
   font-size: 1.2em;
 }
 
+@-webkit-keyframes valid-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes valid-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 .menu {
   background-color: #f0f0f0;
 }
@@ -523,29 +540,71 @@ header ::before {
 }
 .menu .menu__list .menu__list__container .menu__list__card {
   display: flex;
-  justify-content: space-between;
   background-color: #fff;
   box-shadow: 5px 5px 5px #dddddd;
   margin-bottom: 20px;
-  width: 90%;
+  width: 434px;
+  height: 85px;
   border-radius: 20px;
+  overflow: hidden;
+  position: relative;
 }
 .menu .menu__list .menu__list__container .menu__list__card:hover {
   cursor: pointer;
   box-shadow: 5px 8px 8px #dddddd;
 }
-.menu .menu__list .menu__list__container .menu__list__card h3 {
+.menu .menu__list .menu__list__container .menu__list__card:hover > .menu__list__card__content {
+  width: 70%;
+}
+.menu .menu__list .menu__list__container .menu__list__card:hover > .validation {
+  transform: translateX(-80px);
+}
+.menu .menu__list .menu__list__container .menu__list__card:hover > .menu__list__card__number {
+  transform: translateX(-80px);
+}
+.menu .menu__list .menu__list__container .menu__list__card:hover i {
+  -webkit-animation: valid-spin 750ms forwards;
+          animation: valid-spin 750ms forwards;
+}
+.menu .menu__list .menu__list__container .menu__list__card .menu__list__card__content {
+  width: 90%;
+  transition: all 500ms ease-in-out;
+}
+.menu .menu__list .menu__list__container .menu__list__card .menu__list__card__content h3 {
   font-size: 1.2em;
   margin: 16px 0 5px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-.menu .menu__list .menu__list__container .menu__list__card p {
+.menu .menu__list .menu__list__container .menu__list__card .menu__list__card__content p {
   font-size: 1.1em;
   margin: 8px 0 16px 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .menu .menu__list .menu__list__container .menu__list__card .menu__list__card__number {
-  padding: 45px 30px 0 0;
+  width: 10%;
+  margin: 0;
+  padding: 46px 10px 0 0;
   font-weight: bold;
   font-size: 1.1em;
+  position: absolute;
+  right: 0px;
+  transition: transform 500ms ease-in-out;
+}
+.menu .menu__list .menu__list__container .menu__list__card .validation {
+  width: 80px;
+  background-color: #99E2D0;
+  position: absolute;
+  right: -80px;
+  transition: transform 500ms ease-in-out;
+}
+.menu .menu__list .menu__list__container .menu__list__card .validation i {
+  color: #fff;
+  font-size: 2em;
+  padding: 27px 24px;
 }
 .menu .menu__button {
   text-align: center;
@@ -614,6 +673,9 @@ header ::before {
     font-size: 1.2em;
     margin: 8px 0 18px 15px;
   }
+  .menu .menu__list .menu__list__container .menu__list__card:hover > .menu__list__card__content {
+    width: 65%;
+  }
   .menu .menu__list .menu__list__container .menu__list__card .menu__list__card__number {
     padding: 45px 30px 0 0;
     font-weight: bold;
@@ -641,6 +703,9 @@ header ::before {
   .menu .menu__list .menu__list__container .menu__list__card p {
     font-size: 1.2em;
     margin: 8px 0 18px 15px;
+  }
+  .menu .menu__list .menu__list__container .menu__list__card:hover > .menu__list__card__content {
+    width: 60%;
   }
   .menu .menu__list .menu__list__container .menu__list__card .menu__list__card__number {
     padding: 45px 30px 0 0;
