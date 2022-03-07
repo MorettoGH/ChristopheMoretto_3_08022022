@@ -497,18 +497,38 @@ header ::before {
   }
 }
 @-webkit-keyframes menu-appearance {
-  from {
+  0% {
     transform: translateY(20px);
+    opacity: 0;
   }
-  to {
+  20% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
     transform: translateY(-20px);
   }
 }
 @keyframes menu-appearance {
-  from {
+  0% {
     transform: translateY(20px);
+    opacity: 0;
   }
-  to {
+  20% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
     transform: translateY(-20px);
   }
 }
@@ -581,20 +601,20 @@ header ::before {
   margin-top: 20px;
 }
 .menu__list__container .menu__list__card:nth-child(1) {
-  -webkit-animation: menu-appearance 1s ease-in-out forwards;
-          animation: menu-appearance 1s ease-in-out forwards;
-}
-.menu__list__container .menu__list__card:nth-child(2) {
-  -webkit-animation: menu-appearance 1s ease-in-out both 0.2s;
-          animation: menu-appearance 1s ease-in-out both 0.2s;
-}
-.menu__list__container .menu__list__card:nth-child(3) {
   -webkit-animation: menu-appearance 1s ease-in-out both 0.4s;
           animation: menu-appearance 1s ease-in-out both 0.4s;
 }
-.menu__list__container .menu__list__card:nth-child(4) {
+.menu__list__container .menu__list__card:nth-child(2) {
   -webkit-animation: menu-appearance 1s ease-in-out both 0.6s;
           animation: menu-appearance 1s ease-in-out both 0.6s;
+}
+.menu__list__container .menu__list__card:nth-child(3) {
+  -webkit-animation: menu-appearance 1s ease-in-out both 0.8s;
+          animation: menu-appearance 1s ease-in-out both 0.8s;
+}
+.menu__list__container .menu__list__card:nth-child(4) {
+  -webkit-animation: menu-appearance 1s ease-in-out both 1s;
+          animation: menu-appearance 1s ease-in-out both 1s;
 }
 .menu__list__container .menu__list__card {
   display: flex;
